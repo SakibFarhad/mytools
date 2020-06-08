@@ -9,8 +9,8 @@ Open Source Apache tool for JAVA Event Driven lib.
 
 ## Stack
 
-* [localstack](https://localstack.cloud/)
-Free and opensource fake AWS develop and test platform
+* [localstack](https://localstack.cloud/)  
+Free and opensource fake AWS develop and test platform  
 
-* [airdock-io](https://github.com/airdock-io)
-Minimal Open Source Docker container image like thumbd, elasticsearch, rabbit, java ... "ready to production"
+* [airdock-io](https://github.com/airdock-io)  
+Minimal Open Source Docker container image like thumbd, elasticsearch, rabbit, java ... "ready to production"  
