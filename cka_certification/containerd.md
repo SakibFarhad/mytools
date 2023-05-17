@@ -73,7 +73,7 @@ systemd setup
 
 ```bash
 sudo systemd daemon-reload
-sudo systemctl enable containerd
+sudo systemctl enable --now containerd
 ```
 
 Download `runc`
