@@ -30,3 +30,4 @@ Steps to setup k8s with `kubeadm`
 # Day 1
 * [containerd setup](containerd.md)
 * [kubeadm, kubelet, kubectl setup](kube_tools.md)
+* [system setup](system_setup.md)

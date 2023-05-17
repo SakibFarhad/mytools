@@ -52,7 +52,7 @@ Add systemd file to `/usr/local/lib/systemd/system/containerd.service`
   [Service]
   #uncomment to enable the experimental sbservice (sandboxed) version of containerd/cri integration
   #Environment="ENABLE_CRI_SANDBOXES=sandboxed"
-  ExecStartPre=-/sbin/modprobe overlay
+  ExecStartPre=-/sbin/modprobe overlay br_netfilter
   ExecStart=/usr/local/bin/containerd
 
   Type=notify
@@ -95,6 +95,14 @@ install `runc`
 sudo install -m 755 runc.amd64 /usr/local/sbin/runc
 ```
 
+download and install `CRICTL`
+
+```bash
+wget -c https://github.com/kubernetes-sigs/cri-tools/releases/download/v1.27.0/crictl-v1.27.0-linux-amd64.tar.gz
+tar xvf crictl-v1.27.0-linux-amd64.tar.gz
+sudo mv crictl /usr/local/bin/
+```
+
 Download `CNI`
 
 ```bash
@@ -132,7 +140,7 @@ Put config in `/etc/containerd/config.toml`
   disabled_plugins = []
   imports = []
   oom_score = 0
-  <!-- set CRI location -->
+  <!-- set CNI location -->
   plugin_dir = "/opt/cni/"
   required_plugins = []
   root = "/var/lib/containerd"
