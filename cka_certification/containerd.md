@@ -108,6 +108,13 @@ sudo ctr info
 
 ## Config
 
+Generate config
+
+```bash
+sudo mkdir -p /etc/containerd
+containerd config default | sudo tee /etc/containerd/config.toml
+```
+
 Put config in `/etc/containerd/config.toml`
 
 <details>
