@@ -21,12 +21,13 @@ Add binaries to `/usr/local`
 
 ```bash
 sudo tar xvf containerd-1.7.0-linux-amd64.tar.gz -C /usr/local/
+sudo mkdir -p /usr/local/lib/systemd/system
 ```
 
 Add systemd file to `/usr/local/lib/systemd/system/containerd.service`
 
 <details>
- <summery>containerd.service</summery>
+ <summary>containerd.service</summary>
 
   ```systemd
   # Copyright The containerd Authors.
@@ -103,7 +104,7 @@ wget -c https://github.com/containernetworking/plugins/releases/download/v1.3.0/
 extract
 
 ```bash
-sudo mkdir -o /opt/cni/bin
+sudo mkdir -p /opt/cni/bin
 sudo tar xvf cni-plugins-linux-amd64-v1.3.0.tgz -C /opt/cni/bin
 ```
 
@@ -131,7 +132,7 @@ Put config in `/etc/containerd/config.toml`
   disabled_plugins = []
   imports = []
   oom_score = 0
-  <!-- Change 1 -->
+  <!-- set CRI location -->
   plugin_dir = "/opt/cni/"
   required_plugins = []
   root = "/var/lib/containerd"
@@ -265,7 +266,7 @@ Put config in `/etc/containerd/config.toml`
               NoPivotRoot = false
               Root = ""
               ShimCgroup = ""
-              <!-- Change 2 -->
+              <!-- set to true -->
               SystemdCgroup = true
 
         [plugins."io.containerd.grpc.v1.cri".containerd.untrusted_workload_runtime]
