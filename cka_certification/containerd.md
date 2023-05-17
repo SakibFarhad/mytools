@@ -112,6 +112,7 @@ Put config in `/etc/containerd/config.toml`
 
 <details>
  <summary>config.toml</summary>
+
   ```toml
   disabled_plugins = []
   imports = []
@@ -393,8 +394,6 @@ Put config in `/etc/containerd/config.toml`
     uid = 0
   ```
 </details>
-
-
 
 ## Usage
 
