@@ -1,24 +1,27 @@
 # Install Kubeadm, Kubelet, and kubectl
 
-`kubeadm` download
+## Install with package manager
 
 ```bash
-sudo wget -c https://dl.k8s.io/v1.27.1/bin/linux/amd64/kubeadm -O /usr/local/bin/kubeadm
-sudo chmod +x /usr/local/bin/kubeadm
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl
+sudo mkdir -p /etc/apt/keyrings
+sudo curl -fsSLo /etc/apt/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-`kubelet` download
+## Install Manually
+
+
+
+## Initialize kubeadm
+
+
 
 ```bash
-sudo wget -c https://dl.k8s.io/v1.27.1/bin/linux/amd64/kubelet -O /usr/local/bin/kubelet
-sudo chmod +x /usr/local/bin/kubelet
+export IPADDR=x.x.x.x # set control panel ip address
+sudo kubeadm init --control-plane-endpoint k8s-master --pod-network-cidr 192.168.0.0/16 --apiserver-advertise-address $IPADDR
 ```
-
-`kubectl` download
-
-```bash
-sudo wget -c https://dl.k8s.io/v1.27.1/bin/linux/amd64/kubectl -O /usr/local/bin/kubectl
-sudo chmod +x /usr/local/bin/kubectl
-```
-
-

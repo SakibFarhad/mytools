@@ -2,7 +2,13 @@
 
 Will install k8s using `kubeadm`. I will try not to use package manager.
 
-Here I will Vagrant with libvirt. Vagrant file can be found [here](https://github.com/SakibFarhad/VagrantBook/tree/master/k8s_cka)
+Here I will use Vagrant with libvirt. Vagrant file can be found [here](https://github.com/SakibFarhad/VagrantBook/tree/master/k8s_cka)
+
+Here I have 3 nodes
+
+* k8s-master
+* k8s-worker01
+* k8s-worker02
 
 Version Declaration:
 
@@ -15,8 +21,8 @@ Version Declaration:
 
 Steps to setup k8s with `kubeadm`
 
-```
-* Install container runtime on all nodes- We will be using [containerd](https://github.com/containerd/containerd).
+```bash
+* Install container runtime on all nodes- We will be using containerd.
 * Install Kubeadm, Kubelet, and kubectl on all the nodes.
 * Initiate Kubeadm control plane configuration on the master node.
 * Save the node join command with the token.
@@ -31,3 +37,6 @@ Steps to setup k8s with `kubeadm`
 * [containerd setup](containerd.md)
 * [kubeadm, kubelet, kubectl setup](kube_tools.md)
 * [system setup](system_setup.md)
+
+# Day 2
+* [kubeadm, kubelet, kubectl setup](kube_tools.md)
