@@ -40,3 +40,6 @@ Steps to setup k8s with `kubeadm`
 
 # Day 2
 * [kubeadm, kubelet, kubectl setup](kube_tools.md)
+
+# Day 3
+* [kubeadm, kubelet, kubectl setup](kube_tools.md)

@@ -1,7 +1,5 @@
 # containerd setup
 
-##
-
 
 ## Install
 
@@ -83,7 +81,7 @@ Add systemd file to `/usr/local/lib/systemd/system/containerd.service`
 systemd setup
 
 ```bash
-sudo systemd daemon-reload
+sudo systemctl daemon-reload
 sudo systemctl enable --now containerd
 ```
 
