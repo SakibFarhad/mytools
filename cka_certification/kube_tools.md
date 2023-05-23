@@ -4,6 +4,8 @@
 
 ## Install with package manager
 
+**Note: This is currently broken**
+
 ```bash
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl
