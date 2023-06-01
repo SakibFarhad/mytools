@@ -33,13 +33,17 @@ Steps to setup k8s with `kubeadm`
 * Deploy a sample app and validate the app
 ```
 
-# Day 1
+## Day 1
+
 * [containerd setup](containerd.md)
 * [kubeadm, kubelet, kubectl setup](kube_tools.md)
 * [system setup](system_setup.md)
 
-# Day 2
+## Day 2
+
 * [kubeadm, kubelet, kubectl setup](kube_tools.md)
 
-# Day 3
+## Day 3
+
 * [kubeadm, kubelet, kubectl setup](kube_tools.md)
+  
