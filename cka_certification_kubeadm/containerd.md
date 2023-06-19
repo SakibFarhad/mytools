@@ -5,24 +5,15 @@
 Download containerd version `1.7.0` along with the checksum
 
 ```bash
-wget -c https://github.com/containerd/containerd/releases/download/v1.7.0/containerd-1.7.0-linux-amd64.tar.gz https://github.com/containerd/containerd/releases/download/v1.7.0/containerd-1.7.0-linux-amd64.tar.gz.sha256sum
-```
-
-check hash sum
-
-```bash
-sha256sum containerd-1.7.0-linux-amd64.tar.gz
-sha256sum -c containerd-1.7.0-linux-amd64.tar.gz.sha256sum
-
-# containerd-1.7.0-linux-amd64.tar.gz: OK
-# sha256sum: containerd-1.7.0-linux-amd64.tar.gz: no properly formatted SHA256 checksum lines found
+wget -c https://github.com/containerd/containerd/releases/download/v1.7.0/containerd-1.7.0-linux-amd64.tar.gz 
 ```
 
 Add binaries to `/usr/local`
 
 ```bash
 sudo tar xvf containerd-1.7.0-linux-amd64.tar.gz -C /usr/local/
-sudo mkdir -p /usr/local/lib/systemd/system
+sudo mkdir -p /usr/local/lib/systemd/system 
+
 ```
 
 Add systemd file to [`/usr/local/lib/systemd/system/containerd.service`](containerd/containerd.service)

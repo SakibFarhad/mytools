@@ -47,3 +47,6 @@ Steps to setup k8s with `kubeadm`
 
 * [kubeadm, kubelet, kubectl setup](kube_tools.md)
   
+## Day 4
+
+* [network setup](network.md)
