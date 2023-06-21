@@ -4,7 +4,7 @@
 
 ## Install with package manager
 
-**Note: This is currently broken**
+
 
 ```bash
 sudo apt-get update
